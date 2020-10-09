@@ -71,7 +71,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 function reversedLooper(letters){
-  for(let i = letter.length - 1; i >=0; i--){
+  for (var i = letters.length - 1; i >= 0; i--){
     alert(letters[i]);
   }
 }
@@ -90,7 +90,13 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 function evenFinder(nums){
-
+let solution = []
+for (let i =0; i < nums.length; i++){
+  if(nums[i] % 2 === 0){
+    solution.push(nums[i])
+  }
+}
+return solution 
 }
 
 
