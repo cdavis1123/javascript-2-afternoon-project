@@ -91,11 +91,12 @@ multiply(4, 3, function(answer){
   If it does, invoke the callback with true as the argument. 
   If the name does not exist, invoke the callback with false as the argument.
 */
-
 function contains(array, name, callback){
-  array.foreach((name, index) => {
-    return contains(name === true);
-  });
+  if(array.includes(name)){
+    callback(true);
+  }else{
+    callback(false);
+  }
 }
 
 
@@ -166,8 +167,10 @@ each(names, function(item, indice){
 */
 
 function getUserById(array, id, callback){
-  for(let id in users){
-  
+  for(let i = 0; i < array.length; i++){
+    if(id === array[i].id){
+      return callback(array[i])
+    }
   }
 }
 
